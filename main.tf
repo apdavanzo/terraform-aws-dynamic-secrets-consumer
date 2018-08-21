@@ -1,7 +1,6 @@
 variable "name" { default = "dynamic-aws-creds-consumer" }
 variable "path" { default = "../producer-workspace/terraform.tfstate" }
 variable "ttl"  { default = "1" }
-variable "region" { default = "us-east-1"}
 
 terraform {
   backend "local" {
@@ -25,6 +24,7 @@ data "vault_aws_access_credentials" "creds" {
 provider "aws" {
   access_key = "${data.vault_aws_access_credentials.creds.access_key}"
   secret_key = "${data.vault_aws_access_credentials.creds.secret_key}"
+  region = "us-east-1"
 }
 
 data "aws_ami" "ubuntu" {
