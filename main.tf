@@ -1,6 +1,7 @@
 variable "name" { default = "dynamic-aws-creds-consumer" }
 variable "path" { default = "../producer-workspace/terraform.tfstate" }
 variable "ttl"  { default = "1" }
+variable "region" { default = "us-east-1"}
 
 terraform {
   backend "local" {
