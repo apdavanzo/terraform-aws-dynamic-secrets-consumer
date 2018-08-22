@@ -14,7 +14,7 @@ data "terraform_remote_state" "producer" {
 
   config {
     organization = "terraform-technical-marketing-demo"
-    name = "terraform-technical-marketing-demo/terraform-aws-dynmaic-secrets-producer"
+    name = "terraform-technical-marketing-demo/terraform-aws-dynamic-secrets-producer"
   }
   }
 
