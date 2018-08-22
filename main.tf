@@ -10,13 +10,12 @@ terraform {
   }
 
 data "terraform_remote_state" "producer" {
-  backend = "remote"
+  backend = "atlas"
 
   config {
-    organization = "terraform-technical-marketing-demo"
-    name = "terraform-technical-marketing-demo/terraform-aws-dynamic-secrets-producer"
+    name = "tfe-technical-marketing-demo/terraform-aws-dynamic-secrets-producer"
   }
-  }
+}
 
 data "vault_aws_access_credentials" "creds" {
   backend = "${data.terraform_remote_state.producer.backend}"
