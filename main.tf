@@ -17,8 +17,6 @@ data "terraform_remote_state" "producer" {
     path = "terraform-technical-marketing-demo/terraform-aws-dynmaic-secrets-producer"
   }
   }
-}
-
 
 data "vault_aws_access_credentials" "creds" {
   backend = "${data.terraform_remote_state.producer.backend}"
