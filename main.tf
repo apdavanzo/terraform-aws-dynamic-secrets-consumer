@@ -3,13 +3,15 @@ variable "path" { default = "../producer-workspace/terraform.tfstate" }
 variable "ttl"  { default = "1" }
 
 terraform {
-  backend "local" {
-    path = "terraform.tfstate"
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "terraform-technical-marketing-demo"
+    }
   }
 }
 
 data "terraform_remote_state" "producer" {
-  backend = "local"
+  backend = "remote"
 
   config {
     path = "${var.path}"
