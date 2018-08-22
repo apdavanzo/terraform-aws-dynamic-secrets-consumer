@@ -1,4 +1,4 @@
-variable "name" { default = "dynamic-aws-creds-consumer" }
+variable "name" { default = "terraform-aws-dynmaic-secrets-consumer" }
 variable "path" { default = "terraform-technical-marketing-demo/terraform-aws-dynmaic-secrets-consumer" }
 variable "ttl"  { default = "1" }
 
