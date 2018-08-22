@@ -14,11 +14,10 @@ data "terraform_remote_state" "producer" {
     hostname = "app.terraform.io"
     organization = "terraform-technical-marketing-demo"
     }
-
   config {
     path = "terraform-technical-marketing-demo/terraform-aws-dynmaic-secrets-producer"
   }
-}
+  }
 
 data "vault_aws_access_credentials" "creds" {
   backend = "${data.terraform_remote_state.producer.backend}"
