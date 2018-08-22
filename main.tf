@@ -1,5 +1,5 @@
 variable "name" { default = "dynamic-aws-creds-consumer" }
-variable "path" { default = "terraform-technical-marketing-demo/terraform-aws-dynmaic-secrets-producer" }
+variable "path" { default = "terraform-technical-marketing-demo/terraform-aws-dynmaic-secrets-consumer" }
 variable "ttl"  { default = "1" }
 
 terraform {
@@ -14,7 +14,7 @@ data "terraform_remote_state" "producer" {
 
   config {
     organization = "terraform-technical-marketing-demo"
-    path = "terraform-technical-marketing-demo/terraform-aws-dynmaic-secrets-producer"
+    name = "terraform-technical-marketing-demo/terraform-aws-dynmaic-secrets-producer"
   }
   }
 
