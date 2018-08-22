@@ -8,7 +8,6 @@ terraform {
     organization = "terraform-technical-marketing-demo"
     }
   }
-}
 
 data "terraform_remote_state" "producer" {
   backend = "remote"
