@@ -1,5 +1,5 @@
 variable "name" { default = "dynamic-aws-creds-consumer" }
-variable "path" { default = "../producer-workspace/terraform.tfstate" }
+variable "path" { default = "terraform-technical-marketing-demo/terraform-aws-dynmaic-secrets-producer" }
 variable "ttl"  { default = "1" }
 
 terraform {
