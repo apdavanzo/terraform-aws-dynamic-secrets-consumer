@@ -10,7 +10,7 @@ terraform {
   }
 
 data "terraform_remote_state" "producer" {
-  backend = "remote"{
+  backend = "remote" {
     hostname = "app.terraform.io"
     organization = "terraform-technical-marketing-demo"
     }
