@@ -10,10 +10,13 @@ terraform {
   }
 
 data "terraform_remote_state" "producer" {
-  backend = "remote"
+  backend = "remote"{
+    hostname = "app.terraform.io"
+    organization = "terraform-technical-marketing-demo"
+    }
 
   config {
-    path = "${var.path}"
+    path = "terraform-technical-marketing-demo/terraform-aws-dynmaic-secrets-producer"
   }
 }
 
